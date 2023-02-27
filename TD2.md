@@ -26,7 +26,7 @@ cat cyberattacks.txt | grep -oP "(?<=meta\s)\w+"
 
   a. Try to run the following command
 ```
-cat cyberattacks.txt | grep -P ’A cyberattack is’
+cat cyberattacks.txt | grep -P 'A cyberattack is'
 ```
 
   b.  Now try the following
@@ -42,4 +42,10 @@ cat cyberattacks.txt | grep -A1 'mw-content-text' | grep -v 'mw-content-text'
 
 #other possibility ; stock the title in the file titlePatern.txt
 cat cyberattacks.txt | grep -oP "(?<=<title>).*(?=</title>)" > titlePatern.txt
+```
+
+6. Extract the table title, make a list of cyber attacks based on section title
+```
+cat cyberattacks.txt | grep -oP "(?<=<title>).*(?=</title>)"
+
 ```
